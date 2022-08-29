@@ -4,19 +4,23 @@
   --heading-font-family: "Bebas Neue", cursive;
   --default-font-family: "Poppins", sans-serif;
 }
-.h1,
-.h2,
-.h3,
+
 h1,
 h2,
 h3 {
   font-family: var(--heading-font-family);
   color: var(--secondary-color);
 }
-
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
 p {
   font-family: var(--default-font-family);
 }
+
 .btn-primary {
   background-color: var(--branding-color) !important;
   color: azure !important;
@@ -48,7 +52,11 @@ p {
   background-color: var(--branding-color);
   color: azure;
 }
-
+.form-label {
+  font-size: 20px;
+  font-family: var(--default-font-family);
+  font-weight: 500;
+}
 form label::after {
   content: " *";
   color: #c52525;
