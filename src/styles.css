@@ -72,20 +72,10 @@ p.footer-title {
 .contact-details {
   font-family: var(--default-font-family);
 }
-@media (max-width: 576px) {
-  .footer-title {
-    font-size: 30px !important;
-  }
-  .support-hours {
-    font-size: 18px !important;
-  }
-  .contact-details {
-    font-size: 18px !important;
-  }
-}
+
 @media (max-width: 768px) {
   #logo {
-    width: 80px;
+    width: 110px;
   }
   .navbar-toggler .navbar-toggler-icon {
     width: 30px !important;
@@ -96,6 +86,30 @@ p.footer-title {
   }
 }
 
+@media (max-width: 576px) {
+  #logo {
+    width: 90px;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .navbar-toggler {
+    padding: 2px 6px;
+  }
+  .nav-icon {
+    font-size: 14px;
+  }
+  .footer-title {
+    font-size: 30px !important;
+  }
+  .support-hours {
+    font-size: 18px !important;
+  }
+  .contact-details {
+    font-size: 18px !important;
+  }
+}
 .modal-backdrop {
   /* bug fix - no overlay */
   display: none;
