@@ -1,38 +1,22 @@
 <?php
 
-$servername = "localhost";
-$database = "u969596019_themobilehour";
-$username = "u969596019_ryazantseva";
-$password = "Osmandina!123";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-
-
-// Taking al 4 values from the form data(input)
-
-$firstName = $_REQUEST['firstName'];
-$lastName = $_REQUEST['lastName'];
-$cust_email = $_REQUEST['cust_email'];
-$password = $_REQUEST['password'];
-
-// Performing insert query execution
-
-$sql = "INSERT INTO customer VALUES ('$firstName','$lastName','$cust_email','$password')";
-
-if(mysqli_query($conn, $sql)){
-    echo "<h3> data stored in a database successfully <h3>"
-} else{
-    echo "ERROR: Hush! Sorry $sql. "
-    . mysqli_error($conn);
+if (isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["cust_email"]) && isset($_POST["password"])) {
+      
+    $conn = new mysqli("localhost", "u969596019_ryazantseva", "Osmandina!123", "u969596019_themobilehour");
+    if($conn->connect_error){
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $firstName = $conn->real_escape_string($_POST["firstName"]);
+    $lastName = $conn->real_escape_string($_POST["lastName"]);
+    $cust_email = $conn->real_escape_string($_POST["cust_email"]);
+    $password = $conn->real_escape_string($_POST["password"]);
+    $sql = "INSERT INTO customer (firstName, lastName, cust_email, password) VALUES ('$firstName', $lastName, $cust_email, $password)";
+    if($conn->query($sql)){
+        echo "Data stored in a database successfully";
+    } else{
+        echo "ERROR: " . $conn->error;
+    }
+    $conn->close();
 }
 
-// Close connection
-
-mysqli_close($conn);
 ?>
