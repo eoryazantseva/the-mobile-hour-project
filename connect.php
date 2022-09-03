@@ -10,7 +10,7 @@ if (isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["cus
     $lastName = $conn->real_escape_string($_POST["lastName"]);
     $cust_email = $conn->real_escape_string($_POST["cust_email"]);
     $password = $conn->real_escape_string($_POST["password"]);
-    $sql = "INSERT INTO customer (firstName, lastName, cust_email, password) VALUES ('$firstName', $lastName, $cust_email, $password)";
+    $sql = "INSERT INTO customer (firstName, lastName, cust_email, password) VALUES ('$firstName', '$lastName', '$cust_email', '$password')";
     if($conn->query($sql)){
         echo "Data stored in a database successfully";
     } else{
