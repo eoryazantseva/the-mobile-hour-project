@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +42,7 @@
           <div class="container">
             <div class="row w-100 align-items-center g-3">
               <div class="col-lg-3 col-xxl-2">
-                <a class="navbar-brand d-none d-lg-block" href="./index.html">
+                <a class="navbar-brand d-none d-lg-block" href="/index.html">
                   <img
                     src="/images/logo_changed.JPG"
                     alt="logo"
@@ -62,7 +64,7 @@
                     <div class="list-inline me-2">
                       <div class="list-inline-item">
                         <a
-                          href="/customer-login.html"
+                          href="/customer/customer-login.html"
                         >
                           <i class="fa fa-solid fa-user me-3 nav-icon"></i>
                         </a>
@@ -132,7 +134,7 @@
                   <div class="list-inline-item">
                     <a
                       class="position-relative"
-                      href="/customer-login.html"
+                      href="/customer/customer-login.html"
                      
                     >
                       <i class="fa fa-solid fa-user me-3 nav-icon"></i>
@@ -209,24 +211,20 @@
       </div>
       <!-- End of navbar -->
 
-<div class="container my-5 pb-5">
-    <h1 class="my-4 mx-0 text-uppercase">Create new customer account</h1>
-  <div class="row"> 
-    <div class="col-12 col-md-9 col-lg-6">
-  
-      <h2 class="text-uppercase">Personal information</h2>
-  
-      <form class="my-4 mb-sm-3" action="connect.php" method="post" >
-        <div class="mb-3">
-          <label for="firstName" class="form-label ms-1" >First Name</label>
-          <input type="text" class="form-control" id="firstName" name="firstName" required>
-        </div>
-         <div class="mb-3">
-          <label for="lastName" class="form-label ms-1">Last Name</label>
-          <input type="text" class="form-control" id="lastName" name="lastName" required>
-        </div>
 
-        <h2 class="text-uppercase my-3">Sign-in information</h2>
+      <!-- Customer login and sign up -->
+
+<div class="container my-5 pb-5">
+  <h1 class="row my-4 mx-0 text-uppercase">Customer login</h1>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h2 class="text-uppercase">Registered customers</h2>
+      <p>If you have an account, sign in with  your email address.</p>
+
+      <form class="mb-5 mb-sm-3" action="customer-login.php" method="post" >
+
+        <?php include('errors.php'); ?>
+
         <div class="mb-3">
           <label for="email" class="form-label ms-1">Email</label>
           <input type="text" class="form-control" id="email" name="cust_email" required>
@@ -235,14 +233,19 @@
           <label for="password" class="form-label">Password</label>
           <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary text-uppercase">Sign in</button>
+        <button type="submit" class="btn btn-primary text-uppercase" name="login_user" >Sign in</button>
       </form>
-      </div>
-   
-</div>
+    </div>
 
 
-  
+    <div class="col-sm-12 col-md-6 mt-sm-5 mt-md-0">
+      <h2 class="uppercase ms-0 ms-md-5">New customers</h2>
+      <p class="ms-0 ms-md-5">Creating an account has many benefits: check out faster, keep more than one address, track orders and more</p>
+        <a href="/customer/sign-up.html">
+          <button class="btn btn-secondary ms-0 ms-md-5 text-uppercase">Create an account</button>
+        </a>
+    </div>
+  </div>
 </div>
 
 
