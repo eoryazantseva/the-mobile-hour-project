@@ -5,8 +5,9 @@
 session_start();
 
 // Declaring and hoisting the variables
-$username = "";
-$email = "";
+$firstName = "";
+$lastName = "";
+$cust_email = "";
 $errors = array();
 $_SESSION['success'] = "";
 
@@ -15,7 +16,7 @@ $_SESSION['success'] = "";
 $db = mysqli_connect('localhost', 'u969596019_ryazantseva', 'Osmandina!123', 'u969596019_themobilehour');
 
 // Registration code
-if (isset($_POST["firstName"]) && isset($_POST["lastName"]) && isset($_POST["cust_email"]) && isset($_POST["password_1"]) && isset($_POST["password_2"])) {
+if (isset($_POST['reg_user'])) {
 
 	// Receiving the values entered and storing
 	// in the variables
@@ -94,7 +95,7 @@ if (isset($_POST['login_user'])) {
 		if (mysqli_num_rows($results) == 1) {
 			
 			// Storing username in session variable
-			$_SESSION['cust_email'] = $cust_username;
+			$_SESSION['cust_email'] = $cust_email;
 			
 			// Welcome message
 			$_SESSION['success'] = "You have logged in!";

@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -216,10 +218,13 @@
   
       <h2 class="text-uppercase">Personal information</h2>
   
-      <form class="my-4 mb-sm-3" action="connect.php" method="post" >
+      <form class="my-4 mb-sm-3" action="sign-up.php" method="post" >
+
+<?php include('errors.php'); ?>
+
         <div class="mb-3">
           <label for="firstName" class="form-label ms-1" >First Name</label>
-          <input type="text" class="form-control" id="firstName" name="firstName" required>
+          <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo $firstName; ?>" required >
         </div>
          <div class="mb-3">
           <label for="lastName" class="form-label ms-1">Last Name</label>
@@ -229,7 +234,7 @@
         <h2 class="text-uppercase my-3">Sign-in information</h2>
         <div class="mb-3">
           <label for="email" class="form-label ms-1">Email</label>
-          <input type="text" class="form-control" id="email" name="cust_email" required>
+          <input type="text" class="form-control" id="email" name="cust_email" value="<?php echo $cust_email; ?>" required>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
@@ -239,7 +244,7 @@
           <label for="password" class="form-label">Confirm Password</label>
           <input type="password" class="form-control" id="password2" name="password_2" required>
         </div>
-        <button type="submit" class="btn btn-primary text-uppercase">Sign in</button>
+        <button type="submit" class="btn btn-primary text-uppercase" name="reg_user">Sign in</button>
       </form>
       </div>
    

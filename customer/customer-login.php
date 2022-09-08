@@ -221,7 +221,7 @@
       <h2 class="text-uppercase">Registered customers</h2>
       <p>If you have an account, sign in with  your email address.</p>
 
-      <form class="mb-5 mb-sm-3" action="customer-login.php" method="post" >
+      <form class="mb-5 mb-sm-3" action="customer-login.php" method="post">
 
         <?php include('errors.php'); ?>
 
