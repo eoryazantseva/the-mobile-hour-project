@@ -6,7 +6,6 @@ session_start();
 
 // Declaring and hoisting the variables
 $username = "";
-$password = "";
 $errors = array();
 $_SESSION['success'] = "";
 
