@@ -1,3 +1,4 @@
+<?php include('validate.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,8 @@
 </head>
 
 <body>
-	<form action="validate.php" method="post">
+	<form action="admin-login.php" method="post">
+		<?php include('errors.php'); ?>
 		<div class="login-box">
 			<h1>Login</h1>
 
@@ -29,7 +31,7 @@
 			</div>
 
 			<input class="button" type="submit"
-					name="login" value="Sign In">
+					name="login_admin" value="Sign In">
 		</div>
 	</form>
 </body>
