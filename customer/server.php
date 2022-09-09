@@ -43,12 +43,12 @@ if (isset($_POST['reg_user'])) {
 	// If the form is error free, then register the user
 	if (count($errors) == 0) {
 		
-		// Password encryption to increase data security
-		$password = md5($password_1);
+		// // Password encryption to increase data security
+		// $password = md5($password_1);
 		
 		// Inserting data into table
 		$query = "INSERT INTO customer (firstName, lastName, cust_email, password)
-				VALUES('$firstName', '$lastName', '$cust_email', '$password')";
+				VALUES('$firstName', '$lastName', '$cust_email', '$password_1')";
 		
 		mysqli_query($db, $query);
 
@@ -83,11 +83,10 @@ if (isset($_POST['login_user'])) {
 	// Checking for the errors
 	if (count($errors) == 0) {
 		
-		// Password matching
-		$password = md5($password);
+		// // Password matching
+		// $password = md5($password);
 		
-		$query = "SELECT * FROM customer WHERE cust_email=
-				'$cust_email' AND password='$password'";
+		$query = "SELECT * FROM `customer` WHERE cust_email='$cust_email' AND password='$password'";
 		$results = mysqli_query($db, $query);
 
 		// $results = 1 means that one user with the
