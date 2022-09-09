@@ -42,7 +42,7 @@
           <div class="container">
             <div class="row w-100 align-items-center g-3">
               <div class="col-lg-3 col-xxl-2">
-                <a class="navbar-brand d-none d-lg-block" href="/index.html">
+                <a class="navbar-brand d-none d-lg-block" href="../index.html">
                   <img
                     src="/images/logo_changed.JPG"
                     alt="logo"
@@ -51,7 +51,7 @@
                   />
                 </a>
                 <div class="d-flex justify-content-between w-100 d-lg-none">
-                  <a class="navbar-brand" href="/index.html">
+                  <a class="navbar-brand" href="../index.html">
                     <img
                       src="/images/logo_changed.JPG"
                       class="ms-3"
@@ -64,7 +64,7 @@
                     <div class="list-inline me-2">
                       <div class="list-inline-item">
                         <a
-                          href="/customer/customer-login.html"
+                          href="customer-login.php"
                         >
                           <i class="fa fa-solid fa-user me-3 nav-icon"></i>
                         </a>
@@ -134,7 +134,7 @@
                   <div class="list-inline-item">
                     <a
                       class="position-relative"
-                      href="/customer/customer-login.html"
+                      href="customer-login.php"
                      
                     >
                       <i class="fa fa-solid fa-user me-3 nav-icon"></i>
@@ -241,7 +241,7 @@
     <div class="col-sm-12 col-md-6 mt-sm-5 mt-md-0">
       <h2 class="uppercase ms-0 ms-md-5">New customers</h2>
       <p class="ms-0 ms-md-5">Creating an account has many benefits: check out faster, keep more than one address, track orders and more</p>
-        <a href="/customer/sign-up.html">
+        <a href="sign-up.php">
           <button class="btn btn-secondary ms-0 ms-md-5 text-uppercase">Create an account</button>
         </a>
     </div>

@@ -42,7 +42,7 @@
           <div class="container">
             <div class="row w-100 align-items-center g-3">
               <div class="col-lg-3 col-xxl-2">
-                <a class="navbar-brand d-none d-lg-block" href="./index.html">
+                <a class="navbar-brand d-none d-lg-block" href="../index.html">
                   <img
                     src="/images/logo_changed.JPG"
                     alt="logo"
@@ -51,7 +51,7 @@
                   />
                 </a>
                 <div class="d-flex justify-content-between w-100 d-lg-none">
-                  <a class="navbar-brand" href="/index.html">
+                  <a class="navbar-brand" href="../index.html">
                     <img
                       src="/images/logo_changed.JPG"
                       class="ms-3"
@@ -64,7 +64,7 @@
                     <div class="list-inline me-2">
                       <div class="list-inline-item">
                         <a
-                          href="/customer-login.html"
+                          href="customer-login.php"
                         >
                           <i class="fa fa-solid fa-user me-3 nav-icon"></i>
                         </a>
@@ -134,7 +134,7 @@
                   <div class="list-inline-item">
                     <a
                       class="position-relative"
-                      href="/customer-login.html"
+                      href="customer-login.php"
                      
                     >
                       <i class="fa fa-solid fa-user me-3 nav-icon"></i>
@@ -153,7 +153,7 @@
             <div class="offcanvas offcanvas-start p-4 p-lg-0" id="navbar-default" aria-modal="true" role="dialog">
               <div class="d-flex justify-content-between align-items-center mb-2 d-block d-lg-none">
                 <div>
-                    <a  class="navbar-brand" href="/index.html">
+                    <a  class="navbar-brand" href="../index.html">
                   <img src="/images/logo_changed.JPG" width="100">
                     </a>
                 </div>
@@ -162,7 +162,7 @@
               <div class="d-none d-md-block">
                 <ul class="navbar-nav">
                   <li class="nav-item ">
-                    <a class="nav-link mx-3" href="/index.html"> Home </a>
+                    <a class="nav-link mx-3" href="../index.html"> Home </a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link mx-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Products </a>
@@ -189,7 +189,7 @@
               <div class="d-block d-md-none">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="/index.html"> Home </a>
+                    <a class="nav-link" href="../index.html"> Home </a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Products </a>
