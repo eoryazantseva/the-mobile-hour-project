@@ -239,42 +239,7 @@ if (isset($_GET['logout'])) {
 
 <div class="container mt-5">
     <div class="row">
-<!-- Sidebar starts -->
-    <div class="col-3 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
-
-   
-        <span class="fs-4  d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">My Account</span>
- 
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="dashboard">
-           <i class="fa-solid fa-gauge"></i>
-            Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-            <i class="fa-solid fa-calendar-days"></i>
-            Orders
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-            <i class="fa-solid fa-circle-info"></i>
-            Account details
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            Logout
-            </a>
-        </li>
-        </ul>
-    </div>
-        <!-- Sidebar ends -->
-    <div class="col-9">
+            <div class="col-md-9 col-sm-12 order-md-last">
 
 
 		<!-- Creating notification when the
@@ -322,6 +287,42 @@ if (isset($_GET['logout'])) {
 		<?php endif ?>
 
     </div>
+<!-- Sidebar starts -->
+    <div class="col-md-3 col-sm-12 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+
+   
+        <span class="fs-4  d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">My Account</span>
+ 
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="dashboard">
+           <i class="fa-solid fa-gauge"></i>
+            Dashboard
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-calendar-days"></i>
+            Orders
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-circle-info"></i>
+            Account details
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            Logout
+            </a>
+        </li>
+        </ul>
+    </div>
+        <!-- Sidebar ends -->
+
     </div>
 </div>
 </body>
