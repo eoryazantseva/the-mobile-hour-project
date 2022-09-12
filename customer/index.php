@@ -322,7 +322,10 @@ if (isset($_GET['logout'])) {
         </ul>
     </div>
         <!-- Sidebar ends -->
-<div class="footer">
+    </div>
+
+    <!-- FOOTER STARTS -->
+    <div class="footer">
   <div class="container border-top mt-5">
     <footer class="row g-4 py-4 bg-light">
       <div class="d-none d-lg-block col-lg-3 text-center">
@@ -388,8 +391,7 @@ if (isset($_GET['logout'])) {
     </footer>
 
 
-
-    </div>
+    <!-- FOOTER ENDS -->
 </div>
 </body>
 </html>
