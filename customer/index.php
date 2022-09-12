@@ -264,11 +264,11 @@ if (isset($_GET['logout'])) {
 			
 
 
-            <p>
+            <p class="d-none d-md-block" >
 				Welcome
 				<strong>
 					<?php echo $_SESSION['cust_email']; ?>
-				</strong>
+				</strong> !
 			</p>
 
 
@@ -276,7 +276,7 @@ if (isset($_GET['logout'])) {
 			
 
 
-            <p>
+            <p class="d-none d-md-block" >
 				<a href="index.php?logout='1'" style="color: red;">
 					Click here to Logout
 				</a>
