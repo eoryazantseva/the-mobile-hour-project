@@ -243,6 +243,7 @@ if (isset($_GET['logout'])) {
 <!-- NAVBAR ENDS -->
 
 <div class="container">
+    <div class="row">
 <!-- Sidebar starts -->
     <div class="col-3 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
 
@@ -253,36 +254,35 @@ if (isset($_GET['logout'])) {
         <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
             <a href="#" class="nav-link active" aria-current="dashboard">
-            <i class="fa-light fa-gauge"></i>
+           <i class="fa-solid fa-gauge"></i>
             Dashboard
             </a>
         </li>
         <li>
             <a href="#" class="nav-link link-dark">
-            <i class="fa-light fa-calendar-days"></i>
+            <i class="fa-solid fa-calendar-days"></i>
             Orders
             </a>
         </li>
         <li>
             <a href="#" class="nav-link link-dark">
-            <i class="fa-light fa-address-book"></i>
+            <i class="fa-solid fa-address-book"></i>
             Address
             </a>
         </li>
         <li>
             <a href="#" class="nav-link link-dark">
-            <i class="fa-light fa-file-user"></i>
+            <i class="fa-solid fa-circle-info"></i>
             Account details
             </a>
         </li>
         <li>
             <a href="#" class="nav-link link-dark">
-            <i class="fa-light fa-arrow-right-from-bracket"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
             Logout
             </a>
         </li>
         </ul>
-
     </div>
         <!-- Sidebar ends -->
     <div class="col-9">
@@ -333,9 +333,7 @@ if (isset($_GET['logout'])) {
 		<?php endif ?>
 
     </div>
-
-
-
+    </div>
 </div>
 </body>
 </html>
