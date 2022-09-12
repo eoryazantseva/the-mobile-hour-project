@@ -242,6 +242,52 @@ if (isset($_GET['logout'])) {
       </div>
 <!-- NAVBAR ENDS -->
 
+<div class="container">
+<!-- Sidebar starts -->
+    <div class="col-3 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+
+   
+        <span class="fs-4  d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">My Account</span>
+ 
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="dashboard">
+            <i class="fa-light fa-gauge"></i>
+            Dashboard
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-light fa-calendar-days"></i>
+            Orders
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-light fa-address-book"></i>
+            Address
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-light fa-file-user"></i>
+            Account details
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+            <i class="fa-light fa-arrow-right-from-bracket"></i>
+            Logout
+            </a>
+        </li>
+        </ul>
+
+    </div>
+        <!-- Sidebar ends -->
+    <div class="col-9">
+
+
 		<!-- Creating notification when the
 				user logs in -->
 		
@@ -264,7 +310,7 @@ if (isset($_GET['logout'])) {
 			
 
 
-<p>
+            <p>
 				Welcome
 				<strong>
 					<?php echo $_SESSION['cust_email']; ?>
@@ -276,7 +322,7 @@ if (isset($_GET['logout'])) {
 			
 
 
-<p>
+            <p>
 				<a href="index.php?logout='1'" style="color: red;">
 					Click here to Logout
 				</a>
@@ -285,6 +331,11 @@ if (isset($_GET['logout'])) {
 
 
 		<?php endif ?>
-	</div>
+
+    </div>
+
+
+
+</div>
 </body>
 </html>
