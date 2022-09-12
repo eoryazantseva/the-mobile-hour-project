@@ -239,7 +239,7 @@ if (isset($_GET['logout'])) {
 
 <div class="container mt-5">
     <div class="row">
-            <div class="col-md-9 col-sm-12 order-md-last">
+            <div class="col-md-8 col-sm-12 order-md-last">
 
 
 		<!-- Creating notification when the
@@ -288,7 +288,7 @@ if (isset($_GET['logout'])) {
 
     </div>
 <!-- Sidebar starts -->
-    <div class="col-md-3 col-sm-12 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <div class="col-md-4 col-sm-12 d-flex flex-column flex-shrink-0 p-3 bg-light">
 
    
         <span class="fs-4  d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">My Account</span>
@@ -322,6 +322,72 @@ if (isset($_GET['logout'])) {
         </ul>
     </div>
         <!-- Sidebar ends -->
+<div class="footer">
+  <div class="container border-top mt-5">
+    <footer class="row g-4 py-4 bg-light">
+      <div class="d-none d-lg-block col-lg-3 text-center">
+        <img src="/images/logo_changed.JPG" width="150" alt="logo">
+      </div>
+      <div class="col-12 col-md-12 col-lg-5">
+<p class="footer-title"> Need help?</p>
+<p class="support-hours">
+  Support Hours:
+  <br>
+10am - 6pm / Mon-Fri, excl Public Holiday
+</p>
+<div class="contacts">
+  <ul class="contact-details list-unstyled">
+    <li>
+      <i class="fa-solid fa-location-dot"></i>
+      66 Ernest Street, South Brisbane QLD 4101
+    </li>
+    <li>
+        <i class="fa-solid fa-phone"></i>
+          <a href="tel:+61401xxxxxx">
+          +61 401 xxx xx xx
+          </a>
+    </li>
+    <li>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:online@themobilehour.com.au">  
+        online@themobilehour.com.au
+      </a>
+    </li>
+  </ul>
+</div>
+
+      </div>
+      <div class="col-12 col-md-12 col-lg-4">
+<p class="footer-title"> Payment Methods</p>
+  <div class="row text-center align-items-center my-3 mx-0">
+    
+     <div class="col-4 text-start p-0">
+        <i class="fa-brands fa-cc-paypal fa-2xl"></i>
+      </div>
+      <div class="col-4 text-start p-0">
+        <i class="fa-brands fa-cc-mastercard fa-2xl"></i>
+      </div>
+       <div class="col-4 text-start p-0">
+        <i class="fa-brands fa-amazon-pay fa-2xl"></i>
+      </div>
+  </div>
+  <div class="row text-center align-items-center my-3 mx-0">
+    <div class="col-4 text-start p-0">
+      <i class="fa-brands fa-cc-visa fa-2xl"></i>
+    </div>
+    <div class="col-4 text-start p-0">
+      <i class="fa-brands fa-cc-amex fa-2xl"></i>
+    </div>
+<div class="col-4 text-start p-0">
+    <i class="fa-brands fa-apple-pay fa-2xl"></i>
+    </div>
+  </div>
+
+
+      </div>
+    </footer>
+
+
 
     </div>
 </div>
