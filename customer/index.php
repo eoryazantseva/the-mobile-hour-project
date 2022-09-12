@@ -54,16 +54,11 @@ if (isset($_GET['logout'])) {
     <link rel="stylesheet" href="../src/styles.css" />
 <!-- Google Fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-	<title>Customer account</title>
-	<!-- <link rel="stylesheet" type="text/css"
-					href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<title>My account</title>
 </head>
 <body>
-	<div class="header">
-		<h2>My account</h2>
-	</div>
 	<div class="container">
 <!-- NAVBAR STARTS -->
     <div class="border-bottom" pb-5>
@@ -242,7 +237,7 @@ if (isset($_GET['logout'])) {
       </div>
 <!-- NAVBAR ENDS -->
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
 <!-- Sidebar starts -->
     <div class="col-3 d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
@@ -262,12 +257,6 @@ if (isset($_GET['logout'])) {
             <a href="#" class="nav-link link-dark">
             <i class="fa-solid fa-calendar-days"></i>
             Orders
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link link-dark">
-            <i class="fa-solid fa-address-book"></i>
-            Address
             </a>
         </li>
         <li>
@@ -294,7 +283,7 @@ if (isset($_GET['logout'])) {
 		<!-- Accessible only to the users that
 				have logged in already -->
 		<?php if (isset($_SESSION['cust_email'])) : ?>
-			<div class="error success" >
+			<div class="alert alert-primary" >
 				<h3>
 					<?php
 						echo $_SESSION['success'];
