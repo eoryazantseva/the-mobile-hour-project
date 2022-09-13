@@ -14,7 +14,7 @@
 
         <div class="mb-3">
           <label for="product_image" class="form-label ms-1" >Image</label>
-          <input type="text" class="form-control" name="product_image" >
+          <input type="file" id="productImage" class="form-control" name="product_image" required >
         </div>
          <div class="mb-3">
           <label for="product_id" class="form-label ms-1">ID</label>
@@ -22,27 +22,27 @@
         </div>
         <div class="mb-3">
           <label for="product_name" class="form-label ms-1">Name</label>
-          <input type="text" class="form-control"  name="product_name">
+          <input type="text" class="form-control"  name="product_name" required>
         </div>
         <div class="mb-3">
           <label for="product_model" class="form-label">Model</label>
-          <input type="text" class="form-control" name="product_model">
+          <input type="text" class="form-control" name="product_model" required>
         </div>
         <div class="mb-4">
           <label for="manufacturer" class="form-label">Manufacturer</label>
-          <input type="text" class="form-control" name="manufacturer">
+          <input type="text" class="form-control" name="manufacturer" required>
         </div>
         <div class="mb-4">
           <label for="price" class="form-label">Price</label>
-          <input type="text" class="form-control" name="price">
+          <input type="text" class="form-control" name="price" required>
         </div>
         <div class="mb-4">
           <label for="stock_on_hand" class="form-label">Stock</label>
-          <input type="text" class="form-control" name="stock_on_hand">
+          <input type="text" class="form-control" name="stock_on_hand" required>
         </div>
         <div class="mb-4">
           <label for="feature_id" class="form-label">Feature ID</label>
-          <input type="text" class="form-control" name="feature_id">
+          <input type="text" class="form-control" name="feature_id" required>
         </div>
         <button type="submit" class="btn btn-primary text-uppercase" name="create_product">Create New Product</button>
       </form>
