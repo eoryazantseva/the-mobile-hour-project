@@ -13,13 +13,14 @@ if (!isset($_SESSION['username'])) {
 	header('location: admin-login.php');
 }
 
+
 // Logout button will destroy the session, and
 // will unset the session variables
 // User will be headed to 'login.php'
 // after logging out
 if (isset($_GET['logout'])) {
 	session_destroy();
-	unset($_SESSION['cust_email']);
+	unset($_SESSION['username']);
 	header("location: customer-login.php");
 }
 ?>
@@ -27,15 +28,15 @@ if (isset($_GET['logout'])) {
 <?php include "./templates/top.php"; ?>
 <?php include "./templates/navbar.php"; ?>
 
-<?php if (isset($_SESSION['username'])) : ?>
-			
 
-
-            <p>
-				<strong>
-					<?php echo $_SESSION['username']; ?>
-				</strong> !
-			</p>
-
+	<?php if (isset($_SESSION['username'])) : ?>
+			<div class="alert alert-primary" >
+				<h3>
+					<?php
+						echo $_SESSION['success'];
+						unset($_SESSION['success']);
+					?>
+				</h3>
+			</div>
 
 		<?php endif ?>

@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+
+if (!isset($_SESSION['username'])) {
+  header("location:admin-login.php");
+}
+
 // Declaring and hoisting the variables
 $product_id = "";
 $product_name = "";
@@ -54,7 +60,7 @@ if (isset($_POST['create_product'])) {
 		
 		mysqli_query($db, $query);
 
-        $_SESSION['username'] = $username;
+
 
         // message
 		$_SESSION['success'] = "You added a new product!";
