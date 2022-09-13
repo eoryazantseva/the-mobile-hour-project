@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // Declaring and hoisting the variables
 $product_id = "";
 $product_name = "";
@@ -49,10 +49,17 @@ if (isset($_POST['create_product'])) {
 		// $password = md5($password_1);
 		
 		// Inserting data into table
-		$query = "INSERT INTO customer (product_id, product_name, product_model, manufacturer, price, stock_on_hand, feature_id)
+		$query = "INSERT INTO product (product_id, product_name, product_model, manufacturer, price, stock_on_hand, feature_id)
 				VALUES('$product_id', '$product_name', '$product_model', '$manufacturer', '$price', '$stock_on_hand', '$feature_id')";
 		
 		mysqli_query($db, $query);
+
+        $_SESSION['username'] = $username;
+
+        // message
+		$_SESSION['success'] = "You added a new product!";
+
+        header('location: new-product-success.php');
 	}
 }
 

@@ -237,6 +237,8 @@ if (isset($_GET['logout'])) {
       </div>
 <!-- NAVBAR ENDS -->
 
+<!-- MAIN SECTION STARTS -->
+
 <div class="container mt-5">
     <div class="row">
             <div class="col-md-8 col-sm-12 order-md-last">
@@ -287,6 +289,7 @@ if (isset($_GET['logout'])) {
 		<?php endif ?>
 
     </div>
+    <!-- MAIN SECTION ENDS -->
 <!-- Sidebar starts -->
     <div class="col-md-4 col-sm-12 d-flex flex-column flex-shrink-0 p-3 bg-light">
 

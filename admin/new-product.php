@@ -1,3 +1,5 @@
+<?php include('form-manager.php') ?>
+
 <?php include "./templates/top.php"; ?>
 <?php include "./templates/navbar.php"; ?>
 
@@ -8,13 +10,13 @@
     <div class="col-12 col-md-9 col-lg-6">
   
   
-      <form class="my-4 mb-sm-3" action="#" method="post" >
+      <form class="my-4 mb-sm-3" action="new-product.php" method="post" >
 
-<!-- <?php include('errors.php'); ?> -->
+        <?php include('errors.php'); ?>
 
         <div class="mb-3">
           <label for="product_image" class="form-label ms-1" >Image</label>
-          <input type="file" id="productImage" class="form-control" name="product_image" required >
+          <input type="file" id="productImage" class="form-control" name="product_image" >
         </div>
          <div class="mb-3">
           <label for="product_id" class="form-label ms-1">ID</label>
