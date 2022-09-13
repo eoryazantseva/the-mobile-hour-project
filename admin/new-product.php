@@ -18,10 +18,6 @@
           <label for="product_image" class="form-label ms-1" >Image</label>
           <input type="file" id="productImage" class="form-control" name="product_image" >
         </div>
-         <div class="mb-3">
-          <label for="product_id" class="form-label ms-1">ID</label>
-          <input type="text" class="form-control"  name="product_id" required>
-        </div>
         <div class="mb-3">
           <label for="product_name" class="form-label ms-1">Name</label>
           <input type="text" class="form-control"  name="product_name" required>

@@ -7,7 +7,6 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Declaring and hoisting the variables
-$product_id = "";
 $product_name = "";
 $product_model = "";
 $manufacturer = "";
@@ -28,7 +27,6 @@ if (isset($_POST['create_product'])) {
 	// in the variables
 	// Data sanitization is done to prevent
 	// SQL injections
-	$product_id = mysqli_real_escape_string($db, $_POST['product_id']);
 	$product_name = mysqli_real_escape_string($db, $_POST['product_name']);
     $product_model = mysqli_real_escape_string($db, $_POST['product_model']);
 	$manufacturer = mysqli_real_escape_string($db, $_POST['manufacturer']);
@@ -39,7 +37,6 @@ if (isset($_POST['create_product'])) {
 
 	// Ensuring that the user has not left any input field blank
 	// error messages will be displayed for every blank input
-	if (empty($product_id)) { array_push($errors, "Product ID name is required"); }
     if (empty($product_name)) { array_push($errors, "Product name is required"); }
 	if (empty($product_model)) { array_push($errors, "Product model is required"); }
 	if (empty($manufacturer)) { array_push($errors, "Manufacturer is required"); }
@@ -56,7 +53,7 @@ if (isset($_POST['create_product'])) {
 		
 		// Inserting data into table
 		$query = "INSERT INTO product (product_id, product_name, product_model, manufacturer, price, stock_on_hand, feature_id)
-				VALUES('$product_id', '$product_name', '$product_model', '$manufacturer', '$price', '$stock_on_hand', '$feature_id')";
+				VALUES('$product_name', '$product_model', '$manufacturer', '$price', '$stock_on_hand', '$feature_id')";
 		
 		mysqli_query($db, $query);
 
