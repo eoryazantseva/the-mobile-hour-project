@@ -8,10 +8,10 @@ if (!isset($_SESSION['username'])) {
 <?php include "./templates/navbar.php"; ?>
 
 
-<div class="container">
+
 <div class="row">
   <?php include "./templates/sidebar.php"; ?>
-  <div class="col-md-10 bg-light main">
+  <div class="col-md-10 bg-white main">
     <h2>Products</h2>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
@@ -42,7 +42,4 @@ if (!isset($_SESSION['username'])) {
 </div>
 
 </div>
-
-</div>
-
 
