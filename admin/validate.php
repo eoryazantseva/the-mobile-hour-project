@@ -48,7 +48,7 @@ if (isset($_POST['login_admin'])) {
 			
 			// Page on which the user is sent
 			// to after logging in
-			header('location: adminpage.php');
+			header('location: index.php');
 		}
 		else {
 			
