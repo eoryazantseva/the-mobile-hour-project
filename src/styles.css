@@ -87,6 +87,10 @@ p.footer-title {
   font-family: var(--default-font-family);
 }
 
+.table {
+  font-size: 16px;
+}
+
 @media (max-width: 768px) {
   #logo {
     width: 110px;
