@@ -21,9 +21,13 @@ if (!isset($_SESSION['username'])) {
                         <a href="#" data-toggle="modal" data-target="#add_product_modal" class="btn btn-primary btn-sm">Add Product</a>
                     </div>
                 </div>
+                
+                
+                
 
-
-                <?php
+                <!--Create table-->
+                
+    <?php
                 $host    = 'localhost';
                 $user    = 'u969596019_ryazantseva';
                 $pass    = 'Osmandina!123';
@@ -31,40 +35,47 @@ if (!isset($_SESSION['username'])) {
 
                 //create connection
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-                $connection = mysqli_connect($host, $user, $pass, $db_name);
-
-                //get results from database
-                $result = mysqli_query($connection, "SELECT * FROM product");
-                $all_property = array();  //declare an array for saving property
-
-                //showing property
-                echo '<table class="table">
-                    <thead>
-                        <tr>';  //initialize table tag
-                        while ($property = mysqli_fetch_field($result)) {
-                            echo '<th scope="col">' . $property->name . '</th>';  //get field name for header
-                            $all_property[] = $property->name;  //save those to array
-                            }
-                        echo '</tr>
-                    /thead>'; //end tr tag
-
-
-                    echo '<tbody>';
-                    //showing all data
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<tr>";
-                            foreach ($all_property as $item) {
-                                echo '<td>' . $row[$item] . '</td>'; //get items using property value
-                            }
-                            echo '</tr>
-                    </tbody>';
-                                    }
-                echo "</table>";
-
-                mysqli_close($connection);
+                $conn = mysqli_connect($host, $user, $pass, $db_name);
+                $query = "SELECT * FROM product";
+                $result = mysqli_query($conn, $query);
                 ?>
+<table class="table">
+  <tr>
+    
+    <th>ID</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Manufacturer</th>
+    <th>Price</th>
+    <th>Stock</th>
+    <th>Feature</th>
+    <th> Action</th>
+  </tr>
+<?php
+  while($data = mysqli_fetch_assoc($result)) {
+ ?>
+ <tr>
+  
+   <td><?php echo $data['product_id']; ?> </td>
+   <td><?php echo $data['product_name']; ?> </td>
+   <td><?php echo $data['product_model']; ?> </td>
+   <td><?php echo $data['manufacturer']; ?> </td>
+   <td><?php echo $data['price']; ?> </td>
+   <td><?php echo $data['stock_on_hand']; ?> </td>
+   <td><?php echo $data['feature_id']; ?> </td>
+   <td> 
+    <a class="btn btn-primary btn-sm" href="#">Update</a>
+    <a class="btn btn-danger btn-sm" href="#">Delete</a>
+   </td>
+ <tr>
+
+ <?php } ?>
+ </table>
+              
             </div>
 
         </div>
     </div>
+
+
 
