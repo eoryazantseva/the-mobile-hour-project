@@ -9,7 +9,7 @@ if (!isset($_SESSION['username'])) {
 
 
 
-  <div class="row mt-5">
+  <div class="row">
         <?php include "./templates/sidebar.php"; ?>
         <div class="col-md-10 bg-white main mt-5">
             <div class="container">
@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
                         <h2>Product List</h2>
                     </div>
                     <div class="col-2">
-                        <a href="#" data-toggle="modal" data-target="#add_product_modal" class="btn btn-primary btn-sm">Add Product</a>
+                        <a href="new-product.php" data-toggle="modal" data-target="#add_product_modal" class="btn btn-primary btn-sm">Add Product</a>
                     </div>
                 </div>
                 
