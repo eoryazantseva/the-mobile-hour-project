@@ -59,8 +59,8 @@
    <td><?php echo $data['stock_on_hand']; ?> </td>
    <td><?php echo $data['feature_id']; ?> </td>
    <td> 
-    <a class="btn btn-primary btn-sm" href="#">Update</a>
-    <a class="btn btn-danger btn-sm" href="#">Delete</a>
+    <a class="btn btn-primary btn-sm" href="edit.php?id=<?php echo $data['product_id']; ?>">Update</a>
+    <a class="btn btn-danger btn-sm" href="delete.php?id=<?php echo $data['product_id']; ?>">Delete</a>
    </td>
  <tr>
 
