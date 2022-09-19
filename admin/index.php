@@ -1,13 +1,11 @@
 <?php 
-session_start();  
-if (!isset($_SESSION['username'])) {
-  header("location:admin-login.php");
-}
+    session_start();
+    if (!isset($_SESSION['username'])) {
+      header("location:admin-login.php");
+    }
 ?>
 <?php include "./templates/top.php"; ?>
 <?php include "./templates/navbar.php"; ?>
-
-
 
   <div class="row">
         <?php include "./templates/sidebar.php"; ?>
@@ -21,9 +19,6 @@ if (!isset($_SESSION['username'])) {
                         <a href="new-product.php" data-toggle="modal" data-target="#add_product_modal" class="btn btn-primary btn-sm">Add Product</a>
                     </div>
                 </div>
-                
-                
-                
 
                 <!--Create table-->
                 
