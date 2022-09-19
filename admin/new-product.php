@@ -19,28 +19,34 @@
           <input type="file" id="productImage" class="form-control" name="product_image" >
         </div>
         <div class="mb-3">
-          <label for="product_name" class="form-label ms-1">Name</label>
-          <input type="text" class="form-control"  name="product_name" required>
+          <label for="product_name" class="form-label ms-1">Name
+                <input type="text" class="form-control"  name="product_name" required>
+            </label>
         </div>
         <div class="mb-3">
-          <label for="product_model" class="form-label">Model</label>
-          <input type="text" class="form-control" name="product_model" required>
+          <label for="product_model" class="form-label">Model
+            <input type="text" class="form-control" name="product_model" required>
+          </label>
         </div>
         <div class="mb-4">
-          <label for="manufacturer" class="form-label">Manufacturer</label>
-          <input type="text" class="form-control" name="manufacturer" required>
+          <label for="manufacturer" class="form-label">Manufacturer
+            <input type="text" class="form-control" name="manufacturer" required>
+          </label>
         </div>
         <div class="mb-4">
-          <label for="price" class="form-label">Price</label>
-          <input type="text" class="form-control" name="price" required>
+          <label for="price" class="form-label">Price
+            <input type="text" class="form-control" name="price" required>
+          </label>
         </div>
         <div class="mb-4">
-          <label for="stock_on_hand" class="form-label">Stock</label>
-          <input type="text" class="form-control" name="stock_on_hand" required>
+          <label for="stock_on_hand" class="form-label">Stock
+            <input type="text" class="form-control" name="stock_on_hand" required>
+          </label>
         </div>
         <div class="mb-4">
-          <label for="feature_id" class="form-label">Feature ID</label>
-          <input type="text" class="form-control" name="feature_id" required>
+          <label for="feature_id" class="form-label">Feature ID
+            <input type="text" class="form-control" name="feature_id" required>
+          </label>
         </div>
         <button type="submit" class="btn btn-primary text-uppercase" name="create_product">Create New Product</button>
       </form>

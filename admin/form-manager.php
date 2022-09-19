@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 if (!isset($_SESSION['username'])) {
   header("location:admin-login.php");
 }
@@ -57,11 +56,8 @@ if (isset($_POST['create_product'])) {
 		
 		mysqli_query($db, $query);
 
-
-
         // message
 		$_SESSION['success'] = "You added a new product!";
-
         header('location: new-product-success.php');
 	}
 }
