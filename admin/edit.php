@@ -22,7 +22,7 @@
 
     ?>
        
-        <?php include "form-manager.php"?>
+       
         <?php include "./templates/top.php"; ?>
         <?php include "./templates/navbar.php"; ?>
 
@@ -30,7 +30,7 @@
         <div class="container my-5">
         <h2>Edit product</h2>
 
-    <form method="POST" action="update.php?id=<?php echo $product_id; ?>">
+    <form method="POST" action="update.php?product_id=<?php echo $product_id; ?>">
         <div class="row mb-3">
             <label class="col-sm-3 col-form-label">Product name</label>
                 <div class="col-sm-6">

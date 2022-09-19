@@ -25,6 +25,6 @@
     $feature_id=$_POST['feature_id'];
 
  
-	mysqli_query($conn,"UPDATE `product` SET product_name='$product_name', product_model='$product_model', manufacturer='$manufacturer', price='$price', stock_on_hand='$stock_on_hand',  where userid='$id', feature_id='$feature_id'");
+	mysqli_query($conn,"UPDATE `product` SET product_name='$product_name', product_model='$product_model', manufacturer='$manufacturer', price='$price', stock_on_hand='$stock_on_hand', feature_id='$feature_id' where product_id='$product_id'");
 	header('location:index.php');
 ?>
