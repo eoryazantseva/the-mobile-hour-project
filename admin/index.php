@@ -47,20 +47,20 @@
     <th> Action</th>
   </tr>
 <?php
-  while($row = mysqli_fetch_assoc($result)) {
+  while($data = mysqli_fetch_assoc($result)) {
  ?>
  <tr>
   
-   <td><?php echo $row['product_id']; ?> </td>
-   <td><?php echo $row['product_name']; ?> </td>
-   <td><?php echo $row['product_model']; ?> </td>
-   <td><?php echo $row['manufacturer']; ?> </td>
-   <td><?php echo $row['price']; ?> </td>
-   <td><?php echo $row['stock_on_hand']; ?> </td>
-   <td><?php echo $row['feature_id']; ?> </td>
+   <td><?php echo $data['product_id']; ?> </td>
+   <td><?php echo $data['product_name']; ?> </td>
+   <td><?php echo $data['product_model']; ?> </td>
+   <td><?php echo $data['manufacturer']; ?> </td>
+   <td><?php echo $data['price']; ?> </td>
+   <td><?php echo $data['stock_on_hand']; ?> </td>
+   <td><?php echo $data['feature_id']; ?> </td>
    <td> 
-    <a class="btn btn-primary btn-sm" href="edit.php?product_id=<?php echo $row['product_id']; ?>">Update</a>
-    <a class="btn btn-danger btn-sm" href="delete.php?product_id=<?php echo $row['product_id']; ?>">Delete</a>
+    <a class="btn btn-primary btn-sm" href="#">Update</a>
+    <a class="btn btn-danger btn-sm" href="#">Delete</a>
    </td>
  <tr>
 
@@ -71,3 +71,6 @@
 
         </div>
     </div>
+
+
+

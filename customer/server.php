@@ -1,5 +1,16 @@
 <?php
+$db = "";
 
+function getConnection(){
+	if($db="") {
+		$db = mysqli_connect('localhost', 'u969596019_ryazantseva', 'Osmandina!123', 'u969596019_themobilehour');
+	}
+	return $db;
+}
+
+function autUser($login, $password) {
+
+}
 // Starting the session, necessary
 // for using session variables
 session_start();

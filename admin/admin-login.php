@@ -1,4 +1,19 @@
-<?php include('validate.php') ?>
+<?php
+
+include($_SERVER['DOCUMENT_ROOT'].'/admin/auth.php');
+
+$currentAdminUser = getCurrentAdminUser();
+if(empty($currentAdminUser)) {
+    if( !empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
+        $username = htmlspecialchars($_REQUEST['username']);
+        $userpass = htmlspecialchars($_REQUEST['password']);
+        $currentAdminUser = doLogin($username, $userpass);
+    }
+}else{
+    $arCurrentAdminUser = (array)json_decode($currentAdminUser);
+}
+    //include('validate.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +29,11 @@
     </head>
 
     <body>
+    <?if( !empty( $arCurrentAdminUser ) && !empty( $arCurrentAdminUser['firstName'] ) ){
+        echo "Добрый день ".$arCurrentAdminUser['firstName'];
+    }else{?>
         <form action="admin-login.php" method="post">
-            <?php include('errors.php'); ?>
+            <?//php include('errors.php'); ?>
             <div class="login-box">
                 <h1>Login</h1>
 
@@ -35,6 +53,8 @@
                         name="login_admin" value="Sign In">
             </div>
         </form>
+    <?}?>
+
     </body>
 
 </html>
