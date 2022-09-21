@@ -32,13 +32,7 @@ function doLogin( $username, $password ) {
         $result2 = $result->fetch_assoc();
         mysqli_close($db);
         session_start();
-
-        echo session_id();
-
         $_SESSION['currentUser'] = json_encode($result2);
-
-        echo "<pre>".print_r($_SESSION,true)."</pre>";
-
         return $_SESSION['currentUser'];
     }
 
